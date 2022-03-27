@@ -1,37 +1,121 @@
-## Welcome to GitHub Pages
+# 语法教程
 
-You can use the [editor on GitHub](https://github.com/wangziyu01/grammar.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+****
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## C++
+### 输入输出(i/o)
+#### `printf()`函数
+##### 演示
+```c++
+int a = 1;
+printf("%d", a);
+```
+##### 输出/输入
+控制台将输出变量 a
+##### 说明
+`printf()`函数可以进行格式化输出  
+`printf()`函数需要头文件 cstdio
+##### 函数格式
+"%d"是类型说明，"%d"是整数类型，后面有一个逗号，逗号后是变量名
 
-### Markdown
+****
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+#### `scanf()`函数
+##### 演示
+```c++
+int a;
+scanf("%d", &a);
+```
+##### 输出/输入
+控制台将提示输入，并将输入存入整型变量 a
+##### 说明
+`scanf()`函数可以进行格式化输入  
+`scanf()`函数需要头文件 cstdio
+##### 函数格式
+同`printf()`函数，但是变量名前要加上&符号
 
-```markdown
-Syntax highlighted code block
+****
 
-# Header 1
-## Header 2
-### Header 3
+#### `cout`函数
+##### 演示
+```c++
+int a = 1;
+cout << a << endl;
+```
+##### 输入/输出
+控制台将输出变量 a
+##### 说明
+`cout`函数可以输出变量、字符串等   
+`cout`函数仅能用在C++中  
+`cout`函数需要头文件 iostream
+##### 函数格式
+```c++
+cout << a << b << c << ... << endl;
+```  
+endl 是换行符，同 "\n" ，但是会刷新缓存，而"\n" 不会刷新缓存
 
-- Bulleted
-- List
+****
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+#### `cin`函数
+##### 演示
+```c++
+int a;
+cin >> a;
+```
+##### 输入/输出
+控制台将提示输入，并将输入结果存入变量 a
+#### #说明
+`cin`函数可以输入整数、字符串  
+`cin`函数仅能用在C++中  
+`cin`函数需要头文件 iostream
+##### 函数格式
+```c++
+cin >> a >> b >> c >> ...;
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+****
 
-### Jekyll Themes
+### 循环嵌套
+#### `for()`循环
+##### 演示
+```c++
+for (int i = 1; i <= 10; i++) {
+    cout << i << endl;
+  }
+```
+##### 输出
+控制台将会输出从1到10的每一个数字
+##### 说明
+`for()`循环应用在循环次数已知的情况下
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wangziyu01/grammar.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+*****
 
-### Support or Contact
+#### `while()`循环
+##### 演示
+```c++
+int a = 10;
+while(a >= 0){
+    cout << a << endl;
+    a --;
+}
+```
+##### 输出
+控制台将输出从10到0的每一个数字
+##### 说明
+`while()`循环应用在循环次数未知的情况下
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+****
+
+### 分支语句
+#### `if()`分支语句
+##### 演示
+```c++
+int a = 1;
+if(a == 1){
+    cout << "true" << endl;
+}
+```
+##### 输出
+控制台将会输出 true
+##### 说明
+`if()`分支语句拥有`if-else`语句、`if-else if`语句
